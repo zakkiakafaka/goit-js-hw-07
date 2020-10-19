@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  outline: 0px;
+}
+
+.item {
+    margin: 10px;
+}
+
+#ingredients {
+    margin: 100px 100px;
+}
+
+#gallery {
+    list-style: none;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.gallery-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+#counter {
+    margin-bottom: 100px;
+    margin-left: 100px;
+}
+
+#counter button {
+    width: 100px;
+    height:100px;
+}
+
+#name-input {
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 100px;
+}
+
+#validation-input {
+    border: 3px solid #bdbdbd;
+  }
+  
+  #validation-input.valid {
+    border-color: #4caf50;
+  }
+  
+  #validation-input.invalid {
+    border-color: #f44336;
+  }
+
+#controls {
+    margin: 100px;
+}
