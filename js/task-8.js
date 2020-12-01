@@ -3,7 +3,7 @@
 const inputNumber = document.querySelector('#controls input');
 const render = document.querySelector('button[data-action="render"]');
 const destroy = document.querySelector('button[data-action="destroy"]');
-const container = document.querySelector('#boxes')
+const container = document.querySelector('#boxes');
 
 let amount
 
@@ -22,17 +22,20 @@ const createBoxes = function () {
     box.style.height = `${initialHeight}px`;
     box.style.backgroundColor = `rgb(${random1}, ${random2}, ${random3})`
   }
-}
-
-const destroyBoxes = function () {
-  while (container.firstChild) {
-  container.removeChild(container.firstChild);
-}
-}
+};
 
 inputNumber.addEventListener('input', (event) => {
   amount = event.target.value;
-})
+});
 
-render.addEventListener('click', createBoxes)
-destroy.addEventListener('click', destroyBoxes)
+const destroyBoxes = function () {
+  while (container.firstChild) {
+  // container.removeChild(container.firstChild);
+  container.innerHTML = "";
+}
+};
+
+
+
+render.addEventListener('click', createBoxes);
+destroy.addEventListener('click', destroyBoxes);
